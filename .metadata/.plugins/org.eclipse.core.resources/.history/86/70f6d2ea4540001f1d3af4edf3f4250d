@@ -1,0 +1,267 @@
+package StepDefinition;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pageFactory.HomePageFactory;
+import pageFactory.LoginPageFactory;
+
+public class PageFactoryLoginSteps {
+
+	static WebDriver driver;
+	
+	HomePageFactory home;
+	LoginPageFactory login;
+	@Given("User is on Home page")
+	public void user_is_on_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("User is trying to log in");
+		driver=new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	    driver.get("http://localhost:3000/");
+	    home=new HomePageFactory(driver);
+	    home.logoIsDisplayed();
+	}
+
+	@When("User clicks on AboutUs button")
+	public void user_clicks_on_about_us_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    driver.findElement(By.xpath("//a[normalize-space()='About Us']")).click();
+		home=new HomePageFactory(driver);
+	    home.MapisDisplayed();
+	}
+
+	@When("User clicks on Placements button")
+	public void user_clicks_on_placements_button() {
+	    // Write code here that turns the phrase above into concrete actions
+		 driver.findElement(By.xpath("//a[normalize-space()='Placements']")).click();
+			home=new HomePageFactory(driver);
+		    home.placementisDisplayed();
+	}
+
+	@When("User clicks on Departments button")
+	public void user_clicks_on_departments_button() {
+	    // Write code here that turns the phrase above into concrete actions
+		 driver.findElement(By.xpath("//a[normalize-space()='Departments']")).click();
+			home=new HomePageFactory(driver);
+		    home.csisDisplayed();
+	}
+
+	@When("User clicks on ContactUs button")
+	public void user_clicks_on_contact_us_button() throws InterruptedException {
+	    // Write code here that turns the phrase above into concrete actions
+		 driver.findElement(By.xpath("//a[normalize-space()='Contact Us']")).click();
+			home=new HomePageFactory(driver);
+		    home.smsisDisplayed();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+@Given("User is on the home page")
+public void user_is_on_the_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+	 	driver.get("http://localhost:3000/");
+	    home=new HomePageFactory(driver);
+	    home.logoIsDisplayed();
+}
+
+@And("clicks on navigate login button")
+public void clicks_on_navigate_login_button() throws InterruptedException {
+    // Write code here that turns the phrase above into concrete actions
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+     
+     // Scroll down to the bottom of the page
+//     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//     
+     // Alternatively, you can scroll to a specific element if needed
+WebElement LOGINBUTTON = driver.findElement(By.xpath("//a[normalize-space()='Login']"));
+      js.executeScript("arguments[0].scrollIntoView(true);", LOGINBUTTON);
+	System.out.println("User is clicking on log in button");
+	
+	
+	Thread.sleep(2000);
+    LOGINBUTTON.click();
+}
+
+@Then("user is navigated to the login page")
+public void user_is_navigated_to_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+//	login=new LoginPageFactory(driver);
+//	login.logoDisplayed();
+	
+}
+
+@When("User enters valid {string} and {string} and {string}")
+public void user_enters_valid_and_and(String username, String password, String usertype) throws InterruptedException {
+    // Write code here that turns the phrase above into concrete actions
+	 Thread.sleep(2000);
+	 	driver.findElement(By.xpath("//input[@id=':r1:']")).sendKeys(username);
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//input[@id=':r3:']")).sendKeys(password);
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath("//div[@id=':r5:']")).click();
+	    String clicking = "//li[normalize-space()='"+usertype+"']";
+	    
+	    Thread.sleep(2000);
+	    driver.findElement(By.xpath(clicking)).click();
+	    Thread.sleep(2000);
+	
+}
+
+@Then("clicks on login button")
+public void clicks_on_login_button() throws InterruptedException {
+    // Write code here that turns the phrase above into concrete actions
+	
+    driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@Given("User is on the Student home page")
+public void user_is_on_the_student_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+	Assert.assertTrue(driver.findElements(By.xpath("//h3[normalize-space()='Dear Student Welcomeback']")).size()>0,"user is navigated to Student Home page");
+
+
+}
+
+@Given("clicks on navigate Student Database button")
+public void clicks_on_navigate_student_database_button() throws InterruptedException {
+    // Write code here that turns the phrase above into concrete actions
+    Thread.sleep(2000);
+
+ JavascriptExecutor js = (JavascriptExecutor) driver;
+     
+     // Scroll down to the bottom of the page
+//     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//     
+     // Alternatively, you can scroll to a specific element if needed
+WebElement sdButton = driver.findElement(By.xpath("//span[normalize-space()='Students Database']"));
+      js.executeScript("arguments[0].scrollIntoView(true);", sdButton);
+	System.out.println("User is clicking on student database button");
+	 Thread.sleep(1000);
+	//span[normalize-space()='Students Database']
+    driver.findElement(By.xpath("//span[normalize-space()='Students Database']")).click();
+    Thread.sleep(2000);
+	//h2[normalize-space()='This is Student Database']
+	WebElement sdHead = driver.findElement(By.xpath("//h2[normalize-space()='This is Student Database']"));
+    js.executeScript("arguments[0].scrollIntoView(true);", sdHead);
+	
+}
+
+@Then("clicks on Add student button")
+public void clicks_on_add_student_button() throws InterruptedException {
+    // Write code here that turns the phrase above into concrete actions
+    Thread.sleep(2000);
+
+    driver.findElement(By.xpath("//a[@class='btn btn-outline-success']")).click();
+}
+
+@When("students enters valid {string} and {string} and {string} and {string} and {string} and {string} and {string} and {string} and {string}")
+public void students_enters_valid_and_and_and_and_and_and_and_and(String string, String string2, String string3, String string4, String string5, String string6, String string7, String string8, String string9) throws InterruptedException {
+	driver.findElement(By.xpath("//input[@name='RollNo']")).sendKeys(string);
+	driver.findElement(By.xpath("//input[@name='Name']")).sendKeys(string2);
+	driver.findElement(By.xpath("//input[@name='Dept']")).sendKeys(string3);
+	driver.findElement(By.xpath("//input[@name='Contact']")).sendKeys(string4);
+	driver.findElement(By.xpath("//input[@name='Email']")).sendKeys(string5);
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	WebElement sgender = driver.findElement(By.xpath("//input[@name='Gender']"));
+    js.executeScript("arguments[0].scrollIntoView(true);", sgender);
+    Thread.sleep(1000);
+
+	
+	
+	driver.findElement(By.xpath("//input[@name='Gender']")).sendKeys(string6);
+	driver.findElement(By.xpath("//input[@name='DOB']")).sendKeys(string7);
+	driver.findElement(By.xpath("//input[@name='Address']")).sendKeys(string8);
+	driver.findElement(By.xpath("//input[@name='Password']")).sendKeys(string9);
+}
+
+
+
+
+
+
+
+
+
+
+}

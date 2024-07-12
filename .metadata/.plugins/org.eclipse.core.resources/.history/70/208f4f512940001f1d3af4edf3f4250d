@@ -1,0 +1,35 @@
+package pageFactory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePageFactory {
+
+	WebDriver driver;
+	
+	@FindBy(xpath = "//img[@alt='Institute Logo']")
+	WebElement logo;
+	@FindBy(xpath = "//div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-3su884-MuiPaper-root']//div[@class='MuiBox-root css-h5fkc8']")
+	WebElement map;
+	
+	@FindBy(xpath = "//img[@title='Placement Drive']")
+	WebElement placement;
+	public void logoIsDisplayed() {
+		logo.isDisplayed();
+	}
+	
+	public void MapisDisplayed() {
+		map.isDisplayed();
+	}
+	
+	public void placementisDisplayed() {
+		placement.isDisplayed();
+	}
+	
+	public HomePageFactory(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver,this);
+	}
+}

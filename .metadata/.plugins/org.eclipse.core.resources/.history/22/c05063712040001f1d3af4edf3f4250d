@@ -1,0 +1,23 @@
+#Nirmal Raj S
+#10/07/24
+
+Feature: Login Page automation of saucedemo application
+  
+
+ 
+  Scenario: Check Login is successful with valid credentials
+    Given User is on Home page
+    When User clicks on AboutUs button
+    When User clicks on Placements button
+   	When User clicks on Departments button
+    When User clicks on ContactUs button
+    And clicks on login button
+    Then user is navigated to the home page
+    And close the browser
+
+  
+
+    Examples: 
+      | username  | password |
+      | standard_user | secret_sauce |
+      

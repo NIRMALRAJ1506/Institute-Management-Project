@@ -1,0 +1,158 @@
+package StepDefinition;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pageFactory.HomePageFactory;
+import pageFactory.LoginPageFactory;
+
+public class PageFactoryLoginSteps {
+
+	static WebDriver driver;
+	
+	HomePageFactory home;
+	LoginPageFactory login;
+	@Given("User is on Home page")
+	public void user_is_on_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("User is trying to log in");
+		driver=new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	    driver.get("http://localhost:3000/");
+	    home=new HomePageFactory(driver);
+	    home.logoIsDisplayed();
+	}
+
+	@When("User clicks on AboutUs button")
+	public void user_clicks_on_about_us_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    driver.findElement(By.xpath("//a[normalize-space()='About Us']")).click();
+		home=new HomePageFactory(driver);
+	    home.MapisDisplayed();
+	}
+
+	@When("User clicks on Placements button")
+	public void user_clicks_on_placements_button() {
+	    // Write code here that turns the phrase above into concrete actions
+		 driver.findElement(By.xpath("//a[normalize-space()='Placements']")).click();
+			home=new HomePageFactory(driver);
+		    home.placementisDisplayed();
+	}
+
+	@When("User clicks on Departments button")
+	public void user_clicks_on_departments_button() {
+	    // Write code here that turns the phrase above into concrete actions
+		 driver.findElement(By.xpath("//a[normalize-space()='Departments']")).click();
+			home=new HomePageFactory(driver);
+		    home.csisDisplayed();
+	}
+
+	@When("User clicks on ContactUs button")
+	public void user_clicks_on_contact_us_button() throws InterruptedException {
+	    // Write code here that turns the phrase above into concrete actions
+		 driver.findElement(By.xpath("//a[normalize-space()='Contact Us']")).click();
+			home=new HomePageFactory(driver);
+		    home.smsisDisplayed();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+@Given("User is on the home page")
+public void user_is_on_the_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+	 
+}
+
+@And("clicks on navigate login button")
+public void clicks_on_navigate_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+     
+     // Scroll down to the bottom of the page
+//     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//     
+     // Alternatively, you can scroll to a specific element if needed
+WebElement LOGINBUTTON = driver.findElement(By.xpath("//a[normalize-space()='Login']"));
+      js.executeScript("arguments[0].scrollIntoView(true);", LOGINBUTTON);
+	System.out.println("User is clicking on log in button");
+    LOGINBUTTON.click();
+}
+
+@Then("user is navigated to the login page")
+public void user_is_navigated_to_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+//	login=new LoginPageFactory(driver);
+//	login.logoDisplayed();
+	
+}
+
+@When("User enters valid {string} and {string} and {string}")
+public void user_enters_valid_and_and(String username, String password, String usertype) throws InterruptedException {
+    // Write code here that turns the phrase above into concrete actions
+//	login=new LoginPageFactory(driver);
+//	login.enterCredentials(username,password ,usertype);;
+}
+
+@When("clicks on login button")
+public void clicks_on_login_button() throws InterruptedException {
+    // Write code here that turns the phrase above into concrete actions
+//	Thread.sleep(2000);
+//    driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
+	}
+
+@Then("user is navigated to the home page {string}")
+public void user_is_navigated_to_the_home_page(String home) {
+    // Write code here that turns the phrase above into concrete actions
+//	 String header = "//h3[normalize-space()='"+home+"']";
+//
+//		Assert.assertTrue(driver.findElements(By.xpath(header)).size()>0,"user is navigated to home  page");}
+//
+//
+//
+
+
+}

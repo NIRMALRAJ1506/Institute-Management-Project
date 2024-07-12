@@ -1,0 +1,25 @@
+package pageFactory;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+public class LoginPageFactory {
+	@FindBy(xpath = "//h4[@class='MuiTypography-root MuiTypography-h4 css-sgvcr0-MuiTypography-root']\\r\\n")
+	WebElement logo;
+	
+	
+	
+	WebDriver driver;
+	public LoginPageFactory(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver,this);
+	}
+	public void logoDisplayed() {
+	    // Write code here that turns the phrase above into concrete actions
+		logo.isDisplayed();
+	}
+}

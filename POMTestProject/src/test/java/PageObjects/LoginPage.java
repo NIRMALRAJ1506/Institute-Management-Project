@@ -9,28 +9,12 @@ public class LoginPage {
 	By txt_username=By.id("user-name");
 	By txt_password=By.id("password");
 	By btn_login=By.id("login-button");
-	By lbl_logo=By.xpath("//div[@class='app_logo']");
+	By lbl_logo=By.xpath("//img[@alt='Institute Logo']");
 	
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
 	}
-	public void enterUsername(String username) {
-		driver.findElement(txt_username).sendKeys(username);
-	}
-	public void enterPassword(String password) {
-		driver.findElement(txt_password).sendKeys(password);
-	}
 	
-	public void Loginbutton() {
-		driver.findElement(btn_login).click();
-	}
-	
-	public void UserLogin(String username,String password) {
-		driver.findElement(txt_username).sendKeys(username);
-		driver.findElement(txt_password).sendKeys(password);
-		driver.findElement(btn_login).click();
-
-	}
 	public void isAppLogoDisplay() {
 		driver.findElement(lbl_logo).isDisplayed();
 	}

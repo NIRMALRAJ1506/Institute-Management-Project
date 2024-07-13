@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\nirmalraj.s\AppData\Local\Temp\testng-eclipse--1808778078\testng-customsuite.xml</span>
+                    <span>C:\Users\Nirmal Raj\AppData\Local\Temp\testng-eclipse--1395561474\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check user is on Admin Login&quot;, &quot;Login Page automation of Institute Management application&quot;)">runScenario("Check user is on Admin Login", "Login Page automation of Institute Management application")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,32 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of saucedemo application&quot;)">runScenario("Check Login is successful with valid credentials", "Login Page automation of saucedemo application")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check User is on Trainer Login&quot;, &quot;Login Page automation of Institute Management application&quot;)">runScenario("Check User is on Trainer Login", "Login Page automation of Institute Management application")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check User is on Student Login&quot;, &quot;Login Page automation of Institute Management application&quot;)">runScenario("Check User is on Student Login", "Login Page automation of Institute Management application")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of Institute Management a...)">runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Home Page is successful&quot;, &quot;Login Page automation of Institute Management application&quot;)">runScenario("Check Home Page is successful", "Login Page automation of Institute Management application")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of Institute Management a...)">runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="StepDefinition.PageFactoryLoginTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of Institute Management a...)">runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -118,6 +157,49 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">StepDefinition.PageFactoryLoginTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check user is on Admin Login&quot;, &quot;Login Page automation of Institute Management application&quot;)">
+                  </a> <!-- runScenario("Check user is on Admin Login", "Login Page automation of Institute Management application") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check user is on Admin Login","Login Page automation of Institute Management application")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoAlertPresentException: Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [902f5106-816e-4bc6-9a68-2e5e3dd37b87, getAlertText {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:21625, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11392, moz:profile: C:\Users\Nirmal Raj\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:21625/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 902f5106-816e-4bc6-9a68-2e5e3dd37b87
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1163)
+	at StepDefinition.PageFactoryLoginSteps.admin_clicks_on_delete_trainer_button(PageFactoryLoginSteps.java:768)
+	at ✽.Admin clicks on delete trainer button(file:///C:/Users/Nirmal%20Raj/Desktop/Institute%20Management/Institute-Management-Project/PageFactoryTest/src/test/resources/Feature/InstituteTest.feature:101)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -126,10 +208,60 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of saucedemo application&quot;)">
-                  </a> <!-- runScenario("Check Login is successful with valid credentials", "Login Page automation of saucedemo application") -->
+                  <a name="runScenario(&quot;Check User is on Trainer Login&quot;, &quot;Login Page automation of Institute Management application&quot;)">
+                  </a> <!-- runScenario("Check User is on Trainer Login", "Login Page automation of Institute Management application") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check Login is successful with valid credentials","Login Page automation of saucedemo application")</span>
+                  <span class="parameters">("Check User is on Trainer Login","Login Page automation of Institute Management application")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check User is on Student Login&quot;, &quot;Login Page automation of Institute Management application&quot;)">
+                  </a> <!-- runScenario("Check User is on Student Login", "Login Page automation of Institute Management application") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check User is on Student Login","Login Page automation of Institute Management application")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of Institute Management a...)">
+                  </a> <!-- runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check Login is successful with valid credentials","Login Page automation of Institute Management application")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check Home Page is successful&quot;, &quot;Login Page automation of Institute Management application&quot;)">
+                  </a> <!-- runScenario("Check Home Page is successful", "Login Page automation of Institute Management application") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check Home Page is successful","Login Page automation of Institute Management application")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of Institute Management a...)">
+                  </a> <!-- runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check Login is successful with valid credentials","Login Page automation of Institute Management application")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check Login is successful with valid credentials&quot;, &quot;Login Page automation of Institute Management a...)">
+                  </a> <!-- runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check Login is successful with valid credentials","Login Page automation of Institute Management application")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -139,7 +271,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nirmalraj.s\AppData\Local\Temp\testng-eclipse--1808778078\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Nirmal Raj\AppData\Local\Temp\testng-eclipse--1395561474\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,16 +328,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'StepDefinition.PageFactoryLoginTestRunner')
-data.setCell(0, 3, 17418);
+data.setCell(0, 3, 68909);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'StepDefinition.PageFactoryLoginTestRunner')
+data.setCell(1, 3, 53037);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'StepDefinition.PageFactoryLoginTestRunner')
+data.setCell(2, 3, 30290);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'StepDefinition.PageFactoryLoginTestRunner')
+data.setCell(3, 3, 15512);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'StepDefinition.PageFactoryLoginTestRunner')
+data.setCell(4, 3, 12630);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'StepDefinition.PageFactoryLoginTestRunner')
+data.setCell(5, 3, 12508);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'StepDefinition.PageFactoryLoginTestRunner')
+data.setCell(6, 3, 12321);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -233,16 +389,42 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">StepDefinition.PageFactoryLoginTestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@455824ad)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@2a0b901c)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Check Login is successful with valid credentials", "Login Page automation of saucedemo application")</span>
-                <span class="method-start">949 ms</span>
+                <span class="method-name">runScenario("Check Home Page is successful", "Login Page automation of Institute Management application")</span>
+                <span class="method-start">982 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...)</span>
+                <span class="method-start">16499 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check User is on Student Login", "Login Page automation of Institute Management application")</span>
+                <span class="method-start">28824 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...)</span>
+                <span class="method-start">59117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check User is on Trainer Login", "Login Page automation of Institute Management application")</span>
+                <span class="method-start">71749 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check Login is successful with valid credentials", "Login Page automation of Institute Management a...)</span>
+                <span class="method-start">124790 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check user is on Admin Login", "Login Page automation of Institute Management application")</span>
+                <span class="method-start">137305 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">18374 ms</span>
+                <span class="method-start">206223 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

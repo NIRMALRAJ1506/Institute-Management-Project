@@ -1,0 +1,111 @@
+package StepDefinition;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import PageObjects.LoginPage;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+
+public class POMStepDefinition {
+
+	LoginPage login;
+	static WebDriver driver;
+	@Given("user is on Home page")
+	public void user_is_on_home_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver=new FirefoxDriver();
+		driver.get("http://localhost:3000/");
+	    login=new LoginPage(driver);
+	    login.isAppLogoDisplay();	}
+
+	@Given("clicks on navigate login button")
+	public void clicks_on_navigate_login_button() throws InterruptedException {
+	    // Write code here that turns the phrase above into concrete actions
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	     
+	     // Scroll down to the bottom of the page
+//	     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//	     
+	     // Alternatively, you can scroll to a specific element if needed
+	WebElement LOGINBUTTON = driver.findElement(By.xpath("//a[normalize-space()='Login']"));
+	      js.executeScript("arguments[0].scrollIntoView(true);", LOGINBUTTON);
+		System.out.println("User is clicking on log in button");
+		
+		
+		Thread.sleep(2000);
+	    LOGINBUTTON.click();	
+	    }
+
+	public void clicks_the_sign_up_button() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.xpath("//a[normalize-space()='Student Register Here']")).click();
+		}
+	@Given("User is on sign Up page")
+	public void user_is_on_sign_up_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		login=new LoginPage(driver);
+	       login.isAppLogoDisplay();	
+	       }
+
+	
+	
+
+	@When("User enters valid {string} and {string} and {string} and {string} and {string} and {string} and {string} and {string} and {string}")
+	public void user_enters_valid_and_and_and_and_and_and_and_and(String string, String string2, String string3, String string4, String string5, String string6, String string7, String string8, String string9) throws InterruptedException {
+	     //Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.xpath("//input[@id=':r1d:']")).sendKeys(string);
+		driver.findElement(By.xpath("//input[@id=':r1f:']")).sendKeys(string2);
+		driver.findElement(By.xpath("//input[@id=':r1h:']")).sendKeys(string3);
+		driver.findElement(By.xpath("//input[@id=':r1j:']")).sendKeys(string4);
+		driver.findElement(By.xpath("//input[@id=':r1l:']")).sendKeys(string5);
+		driver.findElement(By.xpath("//div[@id=':r1n:']")).sendKeys(string5);
+		driver.findElement(By.xpath("//input[@id=':r1r:']")).sendKeys(string5);
+		driver.findElement(By.xpath("//input[@id=':r1t:']")).sendKeys(string5);
+		driver.findElement(By.xpath("//input[@id=':r1v:']")).sendKeys(string5);
+		  JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		WebElement subbutton = driver.findElement(By.xpath("//button[normalize-space()='submit']"));
+	    js.executeScript("arguments[0].scrollIntoView(true);", subbutton);
+		Thread.sleep(1000);
+		subbutton.click();
+		   Alert alert = driver.switchTo().alert();
+			
+	       Thread.sleep(2000);
+	       // Get the text of the aler
+	       // Accept the alert (click OK)
+	       alert.accept();	
+		}
+	
+	//button[normalize-space()='Register']
+
+	@When("clicks on Register button")
+	public void clicks_on_register_button() {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.findElement(By.xpath("//button[normalize-space()='submit']")).click();	
+		}
+
+	@Then("user is navigated to the login page")
+	public void user_is_navigated_to_the_login_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	       login=new LoginPage(driver);
+	       login.isAppLogoDisplay();
+	}
+
+	@And("close the browser")
+	public void close_the_browser()  {
+	    // Write code here that turns the phrase above into concrete actions
+		driver.close();
+	
+	}
+	
+	
+
+}

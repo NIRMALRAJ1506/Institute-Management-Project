@@ -1,7 +1,7 @@
 #Nirmal Raj S
 #10/07/24
 
-Feature: Login Page automation of saucedemo application
+Feature: Login Page automation of Institute Management application
   
 
  
@@ -67,6 +67,46 @@ Feature: Login Page automation of saucedemo application
       | sr | sn | sd| scn | se| sg | sdob| sa | sp|cid|cn|ct|cd|
       | a | a | a | 9999999999 |a | a | 21/12/2001 | a |a|b|b|b|5|
       
+      
+      
+      
+  Scenario: Check Login is successful with valid credentials
+    Given User is on the home page
+    And clicks on navigate login button
+    Then user is navigated to the login page
+    When User enters valid "<username>" and "<password>" and "<usertype>"
+    Then clicks on login button
+    
+    Examples: 
+      | username  | password | usertype| home |
+      | admin | admin | Admin | Dear Admin Welcomeback |  
+          
+          
+  Scenario: Check user is on Admin Login
+  Given User is on the Admin home page
+  And clicks on navigate Student Database button
+  Then Admin clicks on Add student button
+  When Admin enters valid "<sr>" and "<sn>" and "<sd>" and "<scn>" and "<se>" and "<sg>" and "<sdob>" and "<sa>" and "<sp>"
+  Then Admin clicks on edit button
+  Then Admin clicks on delete button
+  Then Admin Clicks on courses database button
+  Then Admin Clicks on courses add button
+  When Admin is on courses add page "<cid>" and "<cn>" and "<ct>" and "<cd>"
+  Then Admin clicks on course edit button  
+  Then Admin clicks on course delete button
+  Then Admin clicks on Trainer database button
+  Then clicks on add admin button 
+  When Admin enters valid "<tid>" and "<tn>" and "<tc>" and "<te>" and "<td>" 
+  Then Admin clicks on edit trainer button
+  Then Admin clicks on delete trainer button
+  Then Admin clicks on contact list button
+  Then Admin clicks on delete contact button
+  Then clicks on Admin logout button
+  
+   Examples: 
+      | sr | sn | sd| scn | se| sg | sdob| sa | sp|cid|cn|ct|cd|tid|tn|tc|te|td|
+      | a | a | a | 9999999999 |a | a | 21/12/2001 | a |a|b|b|b|5|c|c|c|c|c|
+  
       
       
     

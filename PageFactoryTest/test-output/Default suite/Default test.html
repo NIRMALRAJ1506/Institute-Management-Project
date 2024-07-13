@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 11 10:22:50 IST 2024</td>
+<td>Started on:</td><td>Sat Jul 13 17:26:29 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18508 ms)</td>
+<tr><td>Total time:</td><td>206 seconds (206303 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,67 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check user is on Admin Login", "Login Page automation of Institute Management application"</td>
+<td><div><pre>org.openqa.selenium.NoAlertPresentException: Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [902f5106-816e-4bc6-9a68-2e5e3dd37b87, getAlertText {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:21625, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11392, moz:profile: C:\Users\Nirmal Raj\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:21625/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 902f5106-816e-4bc6-9a68-2e5e3dd37b87
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1163)
+	at StepDefinition.PageFactoryLoginSteps.admin_clicks_on_delete_trainer_button(PageFactoryLoginSteps.java:768)
+	at ✽.Admin clicks on delete trainer button(file:///C:/Users/Nirmal%20Raj/Desktop/Institute%20Management/Institute-Management-Project/PageFactoryTest/src/test/resources/Feature/InstituteTest.feature:101)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1178160997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1178160997'><pre>org.openqa.selenium.NoAlertPresentException: Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [902f5106-816e-4bc6-9a68-2e5e3dd37b87, getAlertText {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 127.0.2, moz:accessibilityChecks: false, moz:buildID: 20240624183754, moz:debuggerAddress: 127.0.0.1:21625, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11392, moz:profile: C:\Users\Nirmal Raj\AppData..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:21625/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 902f5106-816e-4bc6-9a68-2e5e3dd37b87
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1163)
+	at StepDefinition.PageFactoryLoginSteps.admin_clicks_on_delete_trainer_button(PageFactoryLoginSteps.java:768)
+	at ✽.Admin clicks on delete trainer button(file:///C:/Users/Nirmal%20Raj/Desktop/Institute%20Management/Institute-Management-Project/PageFactoryTest/src/test/resources/Feature/InstituteTest.feature:101)
+</pre></div></td>
+<td>68</td>
+<td>StepDefinition.PageFactoryLoginTestRunner@68c9133c</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +137,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Login is successful with valid credentials", "Login Page automation of saucedemo application"</td>
+<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check User is on Trainer Login", "Login Page automation of Institute Management application"</td>
 <td></td>
-<td>17</td>
-<td>StepDefinition.PageFactoryLoginTestRunner@77c2494c</td></tr>
+<td>53</td>
+<td>StepDefinition.PageFactoryLoginTestRunner@68c9133c</td></tr>
+<tr>
+<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check User is on Student Login", "Login Page automation of Institute Management application"</td>
+<td></td>
+<td>30</td>
+<td>StepDefinition.PageFactoryLoginTestRunner@68c9133c</td></tr>
+<tr>
+<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Login is successful with valid credentials", "Login Page automation of Institute Management application"</td>
+<td></td>
+<td>12</td>
+<td>StepDefinition.PageFactoryLoginTestRunner@68c9133c</td></tr>
+<tr>
+<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Home Page is successful", "Login Page automation of Institute Management application"</td>
+<td></td>
+<td>15</td>
+<td>StepDefinition.PageFactoryLoginTestRunner@68c9133c</td></tr>
+<tr>
+<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Login is successful with valid credentials", "Login Page automation of Institute Management application"</td>
+<td></td>
+<td>12</td>
+<td>StepDefinition.PageFactoryLoginTestRunner@68c9133c</td></tr>
+<tr>
+<td title='StepDefinition.PageFactoryLoginTestRunner.runScenario()'><b>runScenario</b><br>Test class: StepDefinition.PageFactoryLoginTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Login is successful with valid credentials", "Login Page automation of Institute Management application"</td>
+<td></td>
+<td>12</td>
+<td>StepDefinition.PageFactoryLoginTestRunner@68c9133c</td></tr>
 </table><p>
 </body>
 </html>

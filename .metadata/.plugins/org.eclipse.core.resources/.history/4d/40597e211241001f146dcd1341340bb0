@@ -1,0 +1,19 @@
+#Nirmal Raj S
+#10/07/24
+
+Feature: Login Page automation of saucedemo application
+  
+
+ 
+  Scenario: Check Sign Up is successful with valid data
+    Given User is on sign Up page
+    When User enters valid "<rn>" and "<fn>" and "<dep>" and "<cn>" and "<em>" and "<gen>" and "<dob>" and "<add>" and "<pass>"
+    And clicks on Register button
+    Then user is navigated to the login page
+    And close the browser
+
+  
+
+    Examples: 
+      | username  | password |
+      | standard_user | secret_sauce |
